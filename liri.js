@@ -44,7 +44,6 @@ function displayTweets() {
 
 
 // Display artist, song name, preview link, and album for the given song
-// Displays info for "The Sign" by Ace of Bass if no song is provided
 function spotifyThisSong() {
 	var Spotify = require('node-spotify-api');
  	var clientId = "c6679cbd80d44423852b7e393acd6af0";
@@ -53,18 +52,64 @@ function spotifyThisSong() {
   		id: clientId,
   		secret: clientSecret
 	});
+	// Index in the returned results of the song that we are searching for. 
+	var index = 0;
+	// Artist(s) of the song
+	var artists = "";
+	// Default song to search for is "The Sign" by Ace of Base if no song is provided
 	var song = "The Sign";
+	// If a song is provided, then use that song
 	if (process.argv[3]) {
 		song = process.argv[3];
 	}
+	// URL for a preview of the song
+	var previewUrl;
  
 	spotify.search({ type: 'track', query: song }, function(err, data) {
   		if (err) {
-    		return console.log('Error occurred: ' + err);
+  			output = "No results found";
+    		console.log(output);
   		}
- 
-		console.log(data); 
-		output = data;
+  		// If the search returns results, then display info about the song
+  		else {
+	  		// Find what index the desired song is at. If exact name is not found, then use the first result
+	 		for (var i in data.tracks.items) {
+				if (data.tracks.items[i].name === song) {
+					index = i;
+					break;
+				}
+			}
+			// Append each artist name to the artists string
+			for (var i = 0; i < data.tracks.items[index].artists.length; i++) {
+				artists += data.tracks.items[index].artists[i].name;
+				if (i < data.tracks.items[index].artists.length - 1) {
+					artists += ",";
+				}
+			}
+			// Display artists and add to data to be logged
+			if (data.tracks.items[index].artists.length > 1) {
+				console.log("Artists: " + artists);
+				output += "Artists: ";
+			}
+			else {
+				console.log("Artist: " + artists);
+				output += "Artist: ";
+			}
+			output += (artists + "\n");
+			// Display song title and add to data to be logged
+			console.log("Song Title: " + data.tracks.items[index].name);
+			output += ("Song Title: " + data.tracks.items[index].name + "\n");
+			// Display preview url if one is available and add to data to be logged
+			if (data.tracks.items[index].preview_url) {
+				previewUrl = data.tracks.items[index].preview_url;
+			}
+			else {
+				previewUrl = "Not Available";
+			}
+			console.log("Preview URL: " + previewUrl);
+			output += ("Preview URL: " + previewUrl + "\n");
+		}
+		
 		updateLogs();
 	});
 }

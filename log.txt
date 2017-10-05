@@ -20,3 +20,122 @@ test
 test is not a recognized command.
 spotify-this-song
 [object Object]
+spotify-this-song
+Artists:
+Rihanna,Drake
+
+spotify-this-song
+Artist:
+Backstreet Boys
+
+spotify-this-song
+Artist:
+Dance To Tipperary
+
+spotify-this-song
+Artist:
+Dance To Tipperary
+
+spotify-this-song
+Artist:
+Shakey Graves
+
+spotify-this-song
+Artists:
+2 Chainz,Kanye West
+
+spotify-this-song
+Artists:
+Rev. Milton Brunson,The Thompson Community Singers
+
+spotify-this-song
+Artists: Rihanna,JAY Z
+
+spotify-this-song
+Artists: Rihanna,JAY Z
+
+spotify-this-song
+Artist: Ace of Base
+
+spotify-this-song
+Artists: 2 Chainz,Kanye West
+
+spotify-this-song
+Artists: 2 Chainz,Kanye West
+Song Title: Birthday Song
+
+spotify-this-song
+Artist: Ace of Base
+Song Title: The Sign
+
+spotify-this-song
+Artist: Ace of Base
+Song Title: The Sign
+
+spotify-this-song
+Artist: Ace of Base
+Song Title: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artists: 2 Chainz,Kanye West
+Song Title: Birthday Song
+Preview URL: null
+
+spotify-this-song
+Artists: Rihanna,JAY Z
+Song Title: Umbrella
+Preview URL: null
+
+spotify-this-song
+Artist: Shakey Graves
+Song Title: Nobody's Fool
+Preview URL: https://p.scdn.co/mp3-preview/c057ea77cf7b9424dcbbbab067fb2ea9a7c5c56d?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artists: Rihanna,Drake
+Song Title: Work
+Preview URL: null
+
+spotify-this-song
+Artist: Dean Martin
+Song Title: Volare (Nel Blu Di Pinto Di Blu) - 1998 - Remastered
+Preview URL: null
+
+spotify-this-song
+Artist: Carpenters
+Song Title: Selections From "Nutcracker": Overture Miniature/Dance Of The Sugar Plum Fairies/Valse Des Fleurs - Edit
+Preview URL: null
+
+spotify-this-song
+Artist: Scott Upper featuring Vicki Justice
+Song Title: The Return of the Flying Purple People Eater
+Preview URL: https://p.scdn.co/mp3-preview/7e3ba577ca9a1a03f4f6c6f1e48cb3b1f9b448da?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Oasis
+Song Title: Champagne Supernova - Remastered
+Preview URL: https://p.scdn.co/mp3-preview/b0e51bb5e0dde22415bfe90bdd9f4ceeb6921cab?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Red Hot Chili Peppers
+Song Title: Californication
+Preview URL: https://p.scdn.co/mp3-preview/175ce440229d2fb5361756f3e68c9647b86a8eee?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Red Hot Chili Peppers
+Song Title: Californication
+Preview URL: https://p.scdn.co/mp3-preview/175ce440229d2fb5361756f3e68c9647b86a8eee?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Carpenters
+Song Title: Selections From "Nutcracker": Overture Miniature/Dance Of The Sugar Plum Fairies/Valse Des Fleurs - Edit
+Preview URL: Not available
+
+spotify-this-song
+Artists: Rihanna,Drake
+Song Title: Work
+Preview URL: Not available
+
+spotify-this-song
+No results found
