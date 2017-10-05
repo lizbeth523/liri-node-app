@@ -67,7 +67,7 @@ function spotifyThisSong() {
  
 	spotify.search({ type: 'track', query: song }, function(err, data) {
   		if (err) {
-  			output = "No results found";
+  			output = "No results found\n";
     		console.log(output);
   		}
   		// If the search returns results, then display info about the song
@@ -79,39 +79,53 @@ function spotifyThisSong() {
 					break;
 				}
 			}
-			// Append each artist name to the artists string
-			for (var i = 0; i < data.tracks.items[index].artists.length; i++) {
-				artists += data.tracks.items[index].artists[i].name;
-				if (i < data.tracks.items[index].artists.length - 1) {
-					artists += ",";
-				}
-			}
-			// Display artists and add to data to be logged
-			if (data.tracks.items[index].artists.length > 1) {
-				console.log("Artists: " + artists);
-				output += "Artists: ";
-			}
-			else {
-				console.log("Artist: " + artists);
-				output += "Artist: ";
-			}
-			output += (artists + "\n");
-			// Display song title and add to data to be logged
-			console.log("Song Title: " + data.tracks.items[index].name);
-			output += ("Song Title: " + data.tracks.items[index].name + "\n");
-			// Display preview url if one is available and add to data to be logged
-			if (data.tracks.items[index].preview_url) {
-				previewUrl = data.tracks.items[index].preview_url;
-			}
-			else {
-				previewUrl = "Not Available";
-			}
-			console.log("Preview URL: " + previewUrl);
-			output += ("Preview URL: " + previewUrl + "\n");
+
+			console.log(getArtistInfo(data.tracks.items[index]));
+			console.log(getSongTitle(data.tracks.items[index]));
+			console.log(getPreviewUrl(data.tracks.items[index]));
 		}
-		
 		updateLogs();
 	});
+}
+
+
+function getArtistInfo(track) {
+	var artists = "";
+
+	// Append each artist name to the artists string
+	for (var i = 0; i < track.artists.length; i++) {
+		artists += track.artists[i].name;
+		if (i < track.artists.length - 1) {
+			artists += ",";
+		}
+	}
+	// Display artists and add to data to be logged
+	if (track.artists.length > 1) {
+		output += ("Artists: " + artists + "\n");
+		return "Artists: " + artists;
+	}
+	else {
+		output += ("Artist: " + artists + "\n");
+		return "Artist: " + artists;
+	}
+}
+
+
+function getSongTitle(track) {
+	output += ("Song Title: " + track.name + "\n");
+	return "Song Title: " + track.name;
+}
+
+
+function getPreviewUrl(track) {
+	if (track.preview_url) {
+		previewUrl = track.preview_url;
+	}
+	else {
+		previewUrl = "Not Available";
+	}
+	output += ("Preview URL: " + previewUrl + "\n");
+	return "Preview URL: " + previewUrl;
 }
 
 

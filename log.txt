@@ -139,3 +139,57 @@ Preview URL: Not available
 
 spotify-this-song
 No results found
+spotify-this-song
+No results found
+spotify-this-song
+Artists: Rihanna,Drake
+Song Title: Work
+Preview URL: Not Available
+
+spotify-this-song
+Artist: Red Hot Chili Peppers
+Song Title: Californication
+Preview URL: https://p.scdn.co/mp3-preview/175ce440229d2fb5361756f3e68c9647b86a8eee?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+No results found
+
+spotify-this-song
+Artist: Old Dominion
+Song Title: No Such Thing as a Broken Heart
+Preview URL: https://p.scdn.co/mp3-preview/a4f06f6466519e35acb54d9a8e84a15379389174?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Old Dominion
+Song Title: No Such Thing as a Broken Heart
+Preview URL: https://p.scdn.co/mp3-preview/a4f06f6466519e35acb54d9a8e84a15379389174?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Red Hot Chili Peppers
+Song Title: Californication
+Preview URL: https://p.scdn.co/mp3-preview/175ce440229d2fb5361756f3e68c9647b86a8eee?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Tim McGraw
+Song Title: Where The Green Grass Grows
+Preview URL: https://p.scdn.co/mp3-preview/f2d4267c173948f2e419dd3a1031786ee5ad1c02?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Highway Bros
+Song Title: Red Rag Top
+Preview URL: https://p.scdn.co/mp3-preview/1e25580ef4eb520c0f39447ad8748bff8ee7d06e?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Zac Brown Band
+Song Title: Chicken Fried
+Preview URL: https://p.scdn.co/mp3-preview/55a49554cd2a46602b15a0ba15477073d938c915?cid=c6679cbd80d44423852b7e393acd6af0
+
+my-tweets
+Wed Oct 04 22:08:47 +0000 2017 - I'm hungry, I need to get some food for #NationalTacoDay
+Wed Oct 04 20:26:05 +0000 2017 - RT @FIirtationship: how i used to pull all-nighters i will never know cause these days i genuinely struggle to even pull all-dayers i'm lit…
+Wed Oct 04 20:22:38 +0000 2017 - RT @CommonWhiteGirI: This dog followed the google earth guy https://t.co/u195rJ86sI
+Wed Oct 04 20:22:31 +0000 2017 - RT @realDonaldTrump: The @NBCNews story has just been totally refuted by Sec. Tillerson and @VP Pence. It is #FakeNews. They should issue a…
+Wed Oct 04 20:20:47 +0000 2017 - RT @Franklin_Graham: We see a rise in wickedness, not just in this country but around the world. Only God can heal the human heart.
+Wed Oct 04 20:19:02 +0000 2017 - Mexican food sounds so good https://t.co/dSEYFhn8dX
+Wed Oct 04 20:17:19 +0000 2017 - Hello everybody, ,this is my first ever post on Twitter
+
