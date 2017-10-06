@@ -392,3 +392,167 @@ Language: English
 Plot: A nurse, a policeman, a young married couple, a salesman, and other survivors of a worldwide plague that is producing aggressive, flesh-eating zombies, take refuge in a mega Midwestern shopping mall.
 Actors: Sarah Polley, Ving Rhames, Jake Weber, Mekhi Phifer
 
+fakecmd 
+fakecmd is not a recognized command.
+movie-this fakeeeeee titleeeeeee 
+Error: Movie not found
+
+movie-this 
+Title: Mr. Nobody
+Year: 2009
+IMDB Rating: 7.9
+Rotten Tomatoes Rating: 64%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+movie-this 
+Title: Mr. Nobody
+Year: 2009
+IMDB Rating: 7.9
+Rotten Tomatoes Rating: 64%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+movie-this 
+Title: Mr. Nobody
+Year: 2009
+IMDB Rating: 7.9
+Rotten Tomatoes Rating: 64%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+movie-this My fair lady 
+Title: My Fair Lady
+Year: 1964
+IMDB Rating: 7.9
+Rotten Tomatoes Rating: 96%
+Country: USA
+Language: English
+Plot: A misogynistic and snobbish phonetics professor agrees to a wager that he can take a flower girl and make her presentable in high society.
+Actors: Audrey Hepburn, Rex Harrison, Stanley Holloway, Wilfrid Hyde-White
+
+movie-this gone with the wind 
+Title: Gone with the Wind
+Year: 1939
+IMDB Rating: 8.2
+Rotten Tomatoes Rating: 94%
+Country: USA
+Language: English
+Plot: A manipulative woman and a roguish man conduct a turbulent romance during the American Civil War and Reconstruction periods.
+Actors: Thomas Mitchell, Barbara O'Neil, Vivien Leigh, Evelyn Keyes
+
+movie-this boat trip 
+Title: Boat Trip
+Year: 2002
+IMDB Rating: 4.9
+Rotten Tomatoes Rating: 7%
+Country: USA, Germany
+Language: English, Swedish, Spanish
+Plot: Two straight men mistakenly end up on a "gays only" cruise.
+Actors: Cuba Gooding Jr., Horatio Sanz, Roselyn Sanchez, Vivica A. Fox
+
+movie-this eraserhead 
+Title: Eraserhead
+Year: 1977
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: 91%
+Country: USA
+Language: English
+Plot: Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the unbearable screams of his newly born mutant child.
+Actors: Jack Nance, Charlotte Stewart, Allen Joseph, Jeanne Bates
+
+movie-this strawberry 
+Title: Strawberry and Chocolate
+Year: 1993
+IMDB Rating: 7.5
+Rotten Tomatoes Rating: 80%
+Country: Cuba, Mexico, Spain, USA
+Language: Spanish, English, French
+Plot: This Oscar nominated film is the story of two men who are opposites, one gay, the other straight, one a fierce communist, the other a fierce individualist, one suspicious, the other accepting, and how they come to love each other.
+Actors: Jorge Perugorría, Vladimir Cruz, Mirta Ibarra, Francisco Gattorno
+
+movie-this hayride 
+Title: Hayride
+Year: 2012
+IMDB Rating: 3.4
+Country: USA
+Language: English
+Plot: A college student returning home for Halloween is forced to face his childhood fears when an escaped killer takes refuge in his family's "Haunted Hayride".
+Actors: Richard Tyson, Sherri Eakin, Jeremy Ivy, Jeremy Sande
+
+movie-this hayride 
+Title: Hayride
+Year: 2012
+IMDB Rating: 3.4
+Rotten Tomatoes Rating: Not Available
+Country: USA
+Language: English
+Plot: A college student returning home for Halloween is forced to face his childhood fears when an escaped killer takes refuge in his family's "Haunted Hayride".
+Actors: Richard Tyson, Sherri Eakin, Jeremy Ivy, Jeremy Sande
+
+movie-this hayride 
+Title: Hayride
+Year: 2012
+IMDB Rating: 3.4
+Rotten Tomatoes Rating: Not Available
+Country: USA
+Language: English
+Plot: A college student returning home for Halloween is forced to face his childhood fears when an escaped killer takes refuge in his family's "Haunted Hayride".
+Actors: Richard Tyson, Sherri Eakin, Jeremy Ivy, Jeremy Sande
+
+movie-this y tu mama tambien 
+Title: Y Tu Mama Tambien
+Year: 2012
+IMDB Rating: 8.3
+Rotten Tomatoes Rating: Not Available
+Country: USA
+Language: English
+Plot: N/A
+Actors: Luis Pazos, Raul Phoenix
+
+movie-this haunted hayride 
+Title: Los Angeles Haunted Hayride
+Year: 2012
+IMDB Rating: N/A
+Rotten Tomatoes Rating: NA
+Country: USA
+Language: English
+Plot: N/A
+Actors: Mandell Frazier
+
+movie-this haunted hayride 
+Title: Los Angeles Haunted Hayride
+Year: 2012
+IMDB Rating: N/A
+Rotten Tomatoes Rating: N/A
+Country: USA
+Language: English
+Plot: N/A
+Actors: Mandell Frazier
+
+movie-this idiocracy 
+Title: Idiocracy
+Year: 2006
+IMDB Rating: 6.6
+Rotten Tomatoes Rating: 76%
+Country: USA
+Language: English
+Plot: Private Joe Bauers, the definition of "average American", is selected by the Pentagon to be the guinea pig for a top-secret hibernation program. Forgotten, he awakes five centuries in the future. He discovers a society so incredibly dumbed down that he's easily the most intelligent person alive.
+Actors: Luke Wilson, Maya Rudolph, Dax Shepard, Terry Crews
+
+movie-this batman 
+Title: Batman
+Year: 1989
+IMDB Rating: 7.6
+Rotten Tomatoes Rating: 72%
+Country: USA, UK
+Language: English, French
+Plot: The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker.
+Actors: Michael Keaton, Jack Nicholson, Kim Basinger, Robert Wuhl
+

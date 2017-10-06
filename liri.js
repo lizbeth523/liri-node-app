@@ -144,20 +144,17 @@ function movieThis() {
 	var movieTitle = process.argv[3] || "Mr. Nobody";
 	var queryUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=40e9cece";
 	var movieInfo = {};
-  /* Rotten Tomatoes Rating of the movie.
-  * Country where the movie was produced.
-  * Language of the movie.
-  * Plot of the movie.
-  * Actors in the movie*/
+  
 	request(queryUrl, function(error, response, body) {
 	  	// If the request is successful (i.e. if the response status code is 200)
 	  	if (!error && response.statusCode === 200) {
 	  		movieInfo = populateMovieInfo(JSON.parse(body));
 	  		// Display the info about the movie and add to data to be logged
 	  		for (key in movieInfo) {
-	  			console.log(key + ": " + movieInfo[key]);
+	  			// console.log(key + ": " + movieInfo[key]);
 	  			output += key + ": " + movieInfo[key] + "\n";
 	  		}
+	  		console.log(output);
 	  		updateLogs();	
 	  	}  	
 	});
@@ -173,7 +170,7 @@ function populateMovieInfo(movie) {
 		movieInfo.Title = movie.Title;
 		movieInfo.Year = movie.Year;
 		movieInfo['IMDB Rating'] = movie.imdbRating;
-		movieInfo['Rotten Tomatoes Rating'] = movie.Ratings[1].Value;
+		movieInfo['Rotten Tomatoes Rating'] = getRottenTomatoesRating(movie.Ratings);
 		movieInfo.Country = movie.Country;
 		movieInfo.Language = movie.Language;
 		movieInfo.Plot = movie.Plot;
@@ -183,6 +180,17 @@ function populateMovieInfo(movie) {
 		movieInfo.Error = "Movie not found";
 	}	
 	return movieInfo;
+}
+
+
+// Returns the Rotten Tomatoes rating of a movie, or "Not Available" if none
+function getRottenTomatoesRating(ratings) {
+	for (i in ratings) {
+		if (ratings[i].Source === "Rotten Tomatoes") {
+			return ratings[i].Value;
+		}
+	}
+	return "N/A";
 }
 
 
