@@ -193,3 +193,202 @@ Wed Oct 04 20:20:47 +0000 2017 - RT @Franklin_Graham: We see a rise in wickednes
 Wed Oct 04 20:19:02 +0000 2017 - Mexican food sounds so good https://t.co/dSEYFhn8dX
 Wed Oct 04 20:17:19 +0000 2017 - Hello everybody, ,this is my first ever post on Twitter
 
+spotify-this-song
+No results found
+
+spotify-this-song
+No results found
+
+spotify-this-song
+Artists: Luis Fonsi,Daddy Yankee,Justin Bieber
+Song Title: Despacito - Remix
+Preview URL: Not Available
+
+spotify-this-song
+Artist: Daddy Yankee
+Song Title: Gasolina
+Preview URL: https://p.scdn.co/mp3-preview/e5d1b199ae20b02689fc77cccc75f82e1c2cc6a7?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song
+Artist: Divinyls
+Song Title: I Touch Myself
+Preview URL: Not Available
+
+C:\Program Files\nodejs\node.exe C:\Users\lizbe\UT_Coding_Bootcamp\homework\Week10HW\liri-node-app\liri.js spotify-this-song i touch myself 
+Artist: Divinyls
+Song Title: I Touch Myself
+Preview URL: Not Available
+
+C:\Program Files\nodejs\node.exe C:\Users\lizbe\UT_Coding_Bootcamp\homework\Week10HW\liri-node-app\liri.js spotify-this-song gasolina 
+Artist: Daddy Yankee
+Song Title: Gasolina
+Preview URL: https://p.scdn.co/mp3-preview/e5d1b199ae20b02689fc77cccc75f82e1c2cc6a7?cid=c6679cbd80d44423852b7e393acd6af0
+
+C:\Program Files\nodejs\node.exe C:\Users\lizbe\UT_Coding_Bootcamp\homework\Week10HW\liri-node-app\liri.js spotify-this-song feoiajfeionaf 
+No results found
+
+spotify-this-song feoiajfeionaf 
+No results found
+
+spotify-this-song gasolina 
+Artist: Daddy Yankee
+Song Title: Gasolina
+Preview URL: https://p.scdn.co/mp3-preview/e5d1b199ae20b02689fc77cccc75f82e1c2cc6a7?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song Red High Heels 
+Artist: Kellie Pickler
+Song Title: Red High Heels
+Preview URL: https://p.scdn.co/mp3-preview/95ec17eb2784f05a59b1bfb57eb606bb26fee98b?cid=c6679cbd80d44423852b7e393acd6af0
+
+spotify-this-song Red High Heels 
+Artist: Kellie Pickler
+Song Title: Red High Heels
+Preview URL: https://p.scdn.co/mp3-preview/95ec17eb2784f05a59b1bfb57eb606bb26fee98b?cid=c6679cbd80d44423852b7e393acd6af0
+Album: Small Town Girl
+
+spotify-this-song wannabe 
+Artist: Spice Girls
+Song Title: Wannabe - Radio Edit
+Preview URL: Not Available
+Album: Spice
+
+spotify-this-song toxic 
+Artist: Britney Spears
+Song Title: Toxic
+Preview URL: https://p.scdn.co/mp3-preview/8465386fd6ce10f7ae3bd9c907825d7cb955ade0?cid=c6679cbd80d44423852b7e393acd6af0
+Album: In The Zone
+
+spotify-this-song first of the month 
+Artist: Bone Thugs-N-Harmony
+Song Title: First of the Month
+Preview: https://p.scdn.co/mp3-preview/6b8e647a272e041d9238bbb416553afe85029c08?cid=c6679cbd80d44423852b7e393acd6af0
+Album: Mo Thugs Records Presents: BoneThugsNHarmony Live 2013
+
+spotify-this-song purple pills 
+Artist: D12
+Song Title: Purple Pills
+Preview: Not Available
+Album: Devils Night
+
+spotify-this-song the real slim shady 
+Artist: Eminem
+Song Title: The Real Slim Shady
+Preview: Not Available
+Album: The Marshall Mathers LP
+
+spotify-this-song cherry bomb 
+Artist: NCT 127
+Song Title: Cherry Bomb
+Preview: https://p.scdn.co/mp3-preview/299edf513acb68c3b7ca14bfd8e4c23f7f95f5a7?cid=c6679cbd80d44423852b7e393acd6af0
+Album: NCT #127 CHERRY BOMB – The 3rd Mini Album
+
+movie-this The Transporter 
+The Transporter
+movie-this The Transporter 
+Title: The TransporterYear: 2002
+movie-this The Transporter 
+Title: The Transporter,Year: 2002
+movie-this The Transporter 
+[object Object]
+movie-this The Transporter 
+[object Object]
+movie-this The Transporter 
+[object Object]
+movie-this The Transporter 
+[object Object]
+movie-this The Transporter 
+Title: The Transporter
+Year: 2002
+IMDB Rating: 6.8
+
+movie-this The Transporter 
+Title: The Transporter
+Year: 2002
+IMDB Rating: 6.8
+Rotten Tomatoes Rating: 54%
+
+movie-this The Transporter 
+Title: The Transporter
+Year: 2002
+IMDB Rating: 6.8
+Rotten Tomatoes Rating: 54%
+Country: France, USA
+
+movie-this The Transporter 
+Title: The Transporter
+Year: 2002
+IMDB Rating: 6.8
+Rotten Tomatoes Rating: 54%
+Country: France, USA
+Language: English, French, Mandarin
+
+movie-this The Transporter 
+undefined
+,undefined
+,undefined
+,undefined
+,undefined
+,undefined
+
+movie-this The Transporter 
+undefined
+
+undefined
+
+undefined
+
+undefined
+
+undefined
+
+undefined
+
+movie-this The Transporter 
+undefined
+, undefined
+, undefined
+, undefined
+, undefined
+, undefined
+
+movie-this The Transporter 
+Title: The Transporter
+Year: 2002
+IMDB Rating: 6.8
+Rotten Tomatoes Rating: 54%
+Country: France, USA
+Language: English, French, Mandarin
+
+movie-this The Transporter 
+Title: The Transporter
+Year: 2002
+IMDB Rating: 6.8
+Rotten Tomatoes Rating: 54%
+Country: France, USA
+Language: English, French, Mandarin
+Plot: Frank is hired to "transport" packages for unknown clients and has made a very good living doing so. But when asked to move a package that begins moving, complications arise.
+Actors: Jason Statham, Qi Shu, Matt Schulze, François Berléand
+
+movie-this The Transporter 
+Error: Movie not found
+
+movie-this The Transporter 
+Title: The Transporter
+Year: 2002
+IMDB Rating: 6.8
+Rotten Tomatoes Rating: 54%
+Country: France, USA
+Language: English, French, Mandarin
+Plot: Frank is hired to "transport" packages for unknown clients and has made a very good living doing so. But when asked to move a package that begins moving, complications arise.
+Actors: Jason Statham, Qi Shu, Matt Schulze, François Berléand
+
+movie-this Dawn of the Dead 
+Title: Dawn of the Dead
+Year: 2004
+IMDB Rating: 7.3
+Rotten Tomatoes Rating: 75%
+Country: USA, Canada, Japan, France
+Language: English
+Plot: A nurse, a policeman, a young married couple, a salesman, and other survivors of a worldwide plague that is producing aggressive, flesh-eating zombies, take refuge in a mega Midwestern shopping mall.
+Actors: Sarah Polley, Ving Rhames, Jake Weber, Mekhi Phifer
+
