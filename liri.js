@@ -1,7 +1,5 @@
 var fs = require("fs");
 var command = process.argv[2];
-// The output that will be written to log.txt
-var output = "";
 
 switch (command) {
 	case "my-tweets":
@@ -16,7 +14,7 @@ switch (command) {
 	case "do-what-it-says":
 		break;
 	default:
-		output = command + " is not a recognized command.";
+		output = command + " is not a recognized command.\n";
 		console.log(output);
 		updateLogs();
 }
@@ -28,19 +26,20 @@ function displayTweets() {
 	var keys = require('./keys.js');
 	var client = new Twitter(keys);
 	var params = {screen_name: 'liri_g7'};
-	var tweet;
+	var output = "";
 
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
 		if (error) {
-	    	return console.log(error);
+	    	output = error;
 	  	}
-	  	// Display the time and text of each tweet
-	  	for (var i in tweets) {
-	  		tweet = tweets[i].created_at + " - " + tweets[i].text;
-	  		console.log(tweet);
-	  		output += (tweet + "\n");
+	  	// Display the date, time, and text of each tweet
+	  	else {
+	  		for (var i in tweets) {
+	  			output += tweets[i].created_at + " - " + tweets[i].text + "\n";
+	  		}
 	  	}
-	  	updateLogs();
+	  	console.log(output);
+	  	updateLogs(output);
 	});
 }
 
@@ -56,29 +55,27 @@ function spotifyThisSong() {
 	});
 	// Index in the returned results of the song that we are searching for. 
 	var index;
-	// Default song to search for is "The Sign" by Ace of Base if no song is provided
-	var song = "The Sign";
-	// If a song is provided, then use that song
-	if (process.argv[3]) {
-		song = process.argv[3];
-	}
+	// Search for song provided, if any, otherwise search for "The Sign" by Ace of Base
+	var song = process.argv[3] || "The Sign";
+	var output = "";
  
 	spotify.search({ type: 'track', query: song }, function(err, data) {
   		if (err) {
-  			output = "No results found\n";
-    		console.log("No results found");
+  			output = "Error: Song not found\n";
   		}
   		// If the search returns results, then display info about the song
   		else {
 			index = getSongIndex(data.tracks.items, song);
-			console.log(getArtistInfo(data.tracks.items[index]));
-			console.log(getSongTitle(data.tracks.items[index]));
-			console.log(getPreviewUrl(data.tracks.items[index]));
-			console.log(getAlbumName(data.tracks.items[index]));
+			output += getArtistInfo(data.tracks.items[index]) + "\n";
+			output += "Song Title: " + data.tracks.items[index].name + "\n";
+			output += getPreviewUrl(data.tracks.items[index]) + "\n";
+			output += "Album: " + data.tracks.items[index].album.name + "\n";
 		}
-		updateLogs();
+		console.log(output);
+		updateLogs(output);
 	});
 }
+
 
 // Find what index the desired song is at. 
 function getSongIndex(tracks, song) {
@@ -102,39 +99,27 @@ function getArtistInfo(track) {
 			artists += ",";
 		}
 	}
-	// Display artists and add to data to be logged
+	// Return artist info
 	if (track.artists.length > 1) {
-		output += ("Artists: " + artists + "\n");
 		return "Artists: " + artists;
 	}
 	else {
-		output += ("Artist: " + artists + "\n");
 		return "Artist: " + artists;
 	}
 }
 
 
-function getSongTitle(track) {
-	output += ("Song Title: " + track.name + "\n");
-	return "Song Title: " + track.name;
-}
-
-// Get preview url for song searched for with spotify-this-song command
+// Get preview url for song
 function getPreviewUrl(track) {
+	var previewUrl;
+
 	if (track.preview_url) {
 		previewUrl = track.preview_url;
 	}
 	else {
 		previewUrl = "Not Available";
 	}
-	output += ("Preview: " + previewUrl + "\n");
 	return "Preview: " + previewUrl;
-}
-
-
-function getAlbumName(track) {
-	output += "Album: " + track.album.name + "\n";
-	return "Album: " + track.album.name;
 }
 
 
@@ -144,6 +129,7 @@ function movieThis() {
 	var movieTitle = process.argv[3] || "Mr. Nobody";
 	var queryUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=40e9cece";
 	var movieInfo = {};
+	var output = "";
   
 	request(queryUrl, function(error, response, body) {
 	  	// If the request is successful (i.e. if the response status code is 200)
@@ -151,11 +137,10 @@ function movieThis() {
 	  		movieInfo = populateMovieInfo(JSON.parse(body));
 	  		// Display the info about the movie and add to data to be logged
 	  		for (key in movieInfo) {
-	  			// console.log(key + ": " + movieInfo[key]);
 	  			output += key + ": " + movieInfo[key] + "\n";
 	  		}
 	  		console.log(output);
-	  		updateLogs();	
+	  		updateLogs(output);	
 	  	}  	
 	});
 }
@@ -183,7 +168,7 @@ function populateMovieInfo(movie) {
 }
 
 
-// Returns the Rotten Tomatoes rating of a movie, or "Not Available" if none
+// Returns the Rotten Tomatoes rating of a movie, or "N/A" if none
 function getRottenTomatoesRating(ratings) {
 	for (i in ratings) {
 		if (ratings[i].Source === "Rotten Tomatoes") {
@@ -194,13 +179,13 @@ function getRottenTomatoesRating(ratings) {
 }
 
 
-// Log the command and output in the log.txt file
-function updateLogs() {
+// Log the command and output data in the log.txt file
+function updateLogs(logData) {
 	var newLog = "";
 	for (var i = 2; i < process.argv.length; i++) {
 		newLog += process.argv[i] + " ";
 	}
-	newLog += "\n" + output + "\n";
+	newLog += "\n" + logData + "\n";
 
 	fs.appendFile("log.txt", newLog, function(err) {
     	// If an error was experienced we say it.
