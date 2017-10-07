@@ -1,22 +1,40 @@
 var fs = require("fs");
-var command = process.argv[2];
+var argument = getArgument(process.argv, 2);
 
-switch (command) {
-	case "my-tweets":
-		displayTweets();
-		break;
-	case "spotify-this-song":
-		spotifyThisSong();
-		break;
-	case "movie-this":
-		movieThis();
-		break;
-	case "do-what-it-says":
-		break;
-	default:
-		output = command + " is not a recognized command.\n";
-		console.log(output);
-		updateLogs();
+commandHandler(process.argv[2], argument);
+
+
+function commandHandler(command, arg) {
+	switch (command) {
+		case "my-tweets":
+			displayTweets();
+			break;
+		case "spotify-this-song":
+			spotifyThisSong(arg);
+			break;
+		case "movie-this":
+			movieThis(arg);
+			break;
+		case "do-what-it-says":
+			doWhatItSays();
+			break;
+		default:
+			output = command + " is not a recognized command.\n";
+			console.log(output);
+			updateLogs();
+	}
+}
+
+
+// Loop through array beginning at startIndex to make argument into one string
+function getArgument(array, startIndex) {
+	var str = "";
+
+	for (var i = startIndex; i < array.length; i++) {
+		str += array[i];
+	}
+
+	return str;
 }
 
 
@@ -45,7 +63,7 @@ function displayTweets() {
 
 
 // Display artist, song name, preview link, and album for the given song
-function spotifyThisSong() {
+function spotifyThisSong(songName) {
 	var Spotify = require('node-spotify-api');
  	var clientId = "c6679cbd80d44423852b7e393acd6af0";
  	var clientSecret = "8d322096cd644cc19b3bac10fc4453f5";
@@ -56,7 +74,7 @@ function spotifyThisSong() {
 	// Index in the returned results of the song that we are searching for. 
 	var index;
 	// Search for song provided, if any, otherwise search for "The Sign" by Ace of Base
-	var song = process.argv[3] || "The Sign";
+	var song = songName || "The Sign";
 	var output = "";
  
 	spotify.search({ type: 'track', query: song }, function(err, data) {
@@ -123,10 +141,10 @@ function getPreviewUrl(track) {
 }
 
 
-function movieThis() {
+function movieThis(movie) {
 	var request = require("request");
 	// If a movie title is provided, then that movie will be searched for. Mr. Nobody is default movie if none is provided
-	var movieTitle = process.argv[3] || "Mr. Nobody";
+	var movieTitle = movie || "Mr. Nobody";
 	var queryUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=40e9cece";
 	var movieInfo = {};
 	var output = "";
@@ -134,7 +152,7 @@ function movieThis() {
 	request(queryUrl, function(error, response, body) {
 	  	// If the request is successful (i.e. if the response status code is 200)
 	  	if (!error && response.statusCode === 200) {
-	  		movieInfo = populateMovieInfo(JSON.parse(body));
+	  		movieInfo = getMovieInfo(JSON.parse(body));
 	  		// Display the info about the movie and add to data to be logged
 	  		for (key in movieInfo) {
 	  			output += key + ": " + movieInfo[key] + "\n";
@@ -147,7 +165,7 @@ function movieThis() {
 
 
 // Provide title, year, imdb and rotten tomatoes ratings, country, language, plot, and actors for the given movie
-function populateMovieInfo(movie) {
+function getMovieInfo(movie) {
 	var movieInfo = {};
 
 	// If the movie is found, then store info about the movie in movieInfo object
@@ -176,6 +194,23 @@ function getRottenTomatoesRating(ratings) {
 		}
 	}
 	return "N/A";
+}
+
+
+// Does what random.txt says by reading in  command and argument from file
+function doWhatItSays() {
+	fs.readFile("random.txt", "utf8", function(error, data) {
+		if (error) {
+			console.log(error);
+			updateLogs(error);
+		}
+		else {
+			var dataArr = data.split(",");
+			var argument = getArgument(dataArr, 1);
+ 			updateLogs("");
+ 			commandHandler(dataArr[0], argument);
+		}
+	});
 }
 
 
