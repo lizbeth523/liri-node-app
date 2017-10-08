@@ -49,13 +49,22 @@ function displayTweets() {
 	  	}
 	  	// Display the date, time, and text of each tweet
 	  	else {
+	  		var timestamp;
 	  		for (var i in tweets) {
-	  			output += tweets[i].created_at + " - " + tweets[i].text + "\n";
+	  			timestamp = getFormattedTimestamp(tweets[i].created_at);
+	  			output += timestamp + " - " + tweets[i].text + "\n";
 	  		}
 	  	}
 	  	console.log(output);
 	  	updateLogs(output);
 	});
+}
+
+
+function getFormattedTimestamp(timestamp) {
+	var date = require("date-and-time");
+	var dateObj = new Date(timestamp);
+	return date.format(dateObj, 'MM/DD/YYYY HH:mm');
 }
 
 

@@ -22,8 +22,9 @@
   },
   "homepage": "https://github.com/lizbeth523/liri-node-app#readme",
   "dependencies": {
+    "date-and-time": "^0.5.0",
     "node-spotify-api": "^1.0.7",
     "request": "^2.81.0",
-    "twitter": "^1.0.0"
+    "twitter": "^1.7.1"
   }
 }
