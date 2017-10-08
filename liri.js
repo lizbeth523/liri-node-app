@@ -64,7 +64,7 @@ function displayTweets() {
 function getFormattedTimestamp(timestamp) {
 	var date = require("date-and-time");
 	var dateObj = new Date(timestamp);
-	return date.format(dateObj, 'MM/DD/YYYY HH:mm');
+	return date.format(dateObj, 'ddd MMM DD YYYY HH:mm');
 }
 
 
