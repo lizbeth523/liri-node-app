@@ -27,20 +27,20 @@ Before using, you must run "npm install" to install the following required packa
 my-tweets
 =========
 
-Returns the last 20 tweets for the username specified in the program.
-|br|To use, enter "node liri.js my-tweets" on the command line.
+Returns the last 20 tweets for the username specified in the program. |br|
+To use, enter "node liri.js my-tweets" on the command line.
 
 spotify-this-song
 =================
 
-Searches for and displays information on a song.
-|br|To use, enter "node liri.js spotify-this song <song title>" on the command line. The song title is optional. If no song is provided by the user, then the program will search for "The Sign" by Ace of Base.
+Searches for and displays information on a song. |br|
+To use, enter "node liri.js spotify-this song <song title>" on the command line. The song title is optional. If no song is provided by the user, then the program will search for "The Sign" by Ace of Base.
 
 movie-this
 ==========
 
-Searches for and displays information on a movie.
-|br|To use, enter "node liri.js movie this <movie title>" on the command line. The movie title is optional. If no movie is provided by the user, then the program will search for the movie "Mr. Nobody."
+Searches for and displays information on a movie. |br|
+To use, enter "node liri.js movie this <movie title>" on the command line. The movie title is optional. If no movie is provided by the user, then the program will search for the movie "Mr. Nobody."
 
 do-what-it-says
 ===============
