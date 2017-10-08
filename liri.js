@@ -22,7 +22,7 @@ function commandHandler(command, arg) {
 		default:
 			var output = command + " is not a recognized command.\n";
 			console.log(output);
-			updateLogs(output);
+			updateLogs(command, output);
 	}
 }
 
@@ -56,7 +56,7 @@ function displayTweets() {
 	  		}
 	  	}
 	  	console.log(output);
-	  	updateLogs(output);
+	  	updateLogs("my-tweets", output);
 	});
 }
 
@@ -96,7 +96,7 @@ function spotifyThisSong(songName) {
 			output += "Album: " + data.tracks.items[index].album.name + "\n";
 		}
 		console.log(output);
-		updateLogs(output);
+		updateLogs("spotify-this-song" + " " + songName, output);
 	});
 }
 
@@ -120,7 +120,7 @@ function getArtistInfo(track) {
 	for (var i = 0; i < track.artists.length; i++) {
 		artists += track.artists[i].name;
 		if (i < track.artists.length - 1) {
-			artists += ",";
+			artists += ", ";
 		}
 	}
 	// Return artist info
@@ -164,7 +164,7 @@ function movieThis(movie) {
 	  			output += key + ": " + movieInfo[key] + "\n";
 	  		}
 	  		console.log(output);
-	  		updateLogs(output);	
+	  		updateLogs("movie-this" + " " + movie, output);	
 	  	}  	
 	});
 }
@@ -203,8 +203,7 @@ function getRottenTomatoesRating(ratings) {
 }
 
 
-// Does what random.txt says by reading in  command and argument from file
-// then passes to command handler function
+// Does what random.txt says by reading in  command and argument from file then passes to command handler function
 function doWhatItSays() {
 	fs.readFile("random.txt", "utf8", function(error, data) {
 		if (error) {
@@ -225,7 +224,7 @@ function doWhatItSays() {
  			}
  			output = command + " " + argument;
  			console.log(output);
- 			updateLogs(output);
+ 			updateLogs("do-what-it-says", " ");
  			// Prevent infinite loop
  			if (command !== "do-what-it-says") {
  				commandHandler(command, argument)
@@ -236,14 +235,10 @@ function doWhatItSays() {
 
 
 // Log the command and output data in the log.txt file
-function updateLogs(logData) {
-	var newLog = "";
-	for (var i = 2; i < process.argv.length; i++) {
-		newLog += process.argv[i] + " ";
-	}
-	newLog += "\n" + logData + "\n";
+function updateLogs(command, logData) {
+	var log = command + "\n" + logData + "\n";
 
-	fs.appendFile("log.txt", newLog, function(err) {
+	fs.appendFile("log.txt", log, function(err) {
     	// If an error was experienced we say it.
   		if (err) {
     		console.log(err);
