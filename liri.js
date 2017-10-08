@@ -1,9 +1,10 @@
 var fs = require("fs");
-var argument = getArgument(process.argv, 2);
 
-commandHandler(process.argv[2], argument);
+// Handle the command given on the command line
+commandHandler(process.argv[2], getArgument(process.argv, 3));
 
 
+// Send the command and argument to the appropriate function
 function commandHandler(command, arg) {
 	switch (command) {
 		case "my-tweets":
@@ -19,21 +20,17 @@ function commandHandler(command, arg) {
 			doWhatItSays();
 			break;
 		default:
-			output = command + " is not a recognized command.\n";
+			var output = command + " is not a recognized command.\n";
 			console.log(output);
-			updateLogs();
+			updateLogs(output);
 	}
 }
 
 
-// Loop through array beginning at startIndex to make argument into one string
+// Return argument from an array in string format beginning at startIndex
 function getArgument(array, startIndex) {
-	var str = "";
-
-	for (var i = startIndex; i < array.length; i++) {
-		str += array[i];
-	}
-
+	var argArray = array.slice(startIndex);
+	var str = argArray.join(' ');
 	return str;
 }
 
@@ -198,6 +195,7 @@ function getRottenTomatoesRating(ratings) {
 
 
 // Does what random.txt says by reading in  command and argument from file
+// then passes to command handler function
 function doWhatItSays() {
 	fs.readFile("random.txt", "utf8", function(error, data) {
 		if (error) {
@@ -205,10 +203,24 @@ function doWhatItSays() {
 			updateLogs(error);
 		}
 		else {
-			var dataArr = data.split(",");
-			var argument = getArgument(dataArr, 1);
- 			updateLogs("");
- 			commandHandler(dataArr[0], argument);
+			var argument = "";
+			var command = "";
+			var output;
+
+			if (data.includes(",")) {
+				command = data.substring(0, data.indexOf(","));
+ 				argument = data.substring(data.indexOf(",") + 1, data.length);
+			}
+ 			else {
+ 				command = data;
+ 			}
+ 			output = command + " " + argument;
+ 			console.log(output);
+ 			updateLogs(output);
+ 			// Prevent infinite loop
+ 			if (command !== "do-what-it-says") {
+ 				commandHandler(command, argument)
+ 			}
 		}
 	});
 }
