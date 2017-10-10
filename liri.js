@@ -31,6 +31,7 @@ function commandHandler(command, arg) {
 function getArgument(array, startIndex) {
 	var argArray = array.slice(startIndex);
 	var str = argArray.join(' ');
+
 	return str;
 }
 
@@ -64,6 +65,7 @@ function displayTweets() {
 function getFormattedTimestamp(timestamp) {
 	var date = require("date-and-time");
 	var dateObj = new Date(timestamp);
+
 	return date.format(dateObj, 'ddd MMM DD YYYY HH:mm');
 }
 
@@ -77,9 +79,7 @@ function spotifyThisSong(songName) {
   		id: clientId,
   		secret: clientSecret
 	});
-	// Index in the returned results of the song that we are searching for. 
-	var index;
-	// Search for song provided, if any, otherwise search for "The Sign" by Ace of Base
+	// Search for song provided, if any. Otherwise search for "The Sign" by Ace of Base
 	var song = songName || "The Sign";
 	var output = "";
  
@@ -89,7 +89,9 @@ function spotifyThisSong(songName) {
   		}
   		// If the search returns results, then display info about the song
   		else {
-			index = getSongIndex(data.tracks.items, song);
+  			// Index in the returned results of the song that we are searching for.
+			var index = getSongIndex(data.tracks.items, song);
+			
 			output += getArtistInfo(data.tracks.items[index]) + "\n";
 			output += "Song Title: " + data.tracks.items[index].name + "\n";
 			output += getPreviewUrl(data.tracks.items[index]) + "\n";
@@ -117,7 +119,7 @@ function getArtistInfo(track) {
 	var artists = "";
 
 	// Append each artist name to the artists string
-	for (var i = 0; i < track.artists.length; i++) {
+	for (var i in track.artists) {
 		artists += track.artists[i].name;
 		if (i < track.artists.length - 1) {
 			artists += ", ";
@@ -135,15 +137,12 @@ function getArtistInfo(track) {
 
 // Get preview url for song
 function getPreviewUrl(track) {
-	var previewUrl;
-
 	if (track.preview_url) {
-		previewUrl = track.preview_url;
+		return "Preview: " + track.preview_url;
 	}
 	else {
-		previewUrl = "Not Available";
+		return "Preview: Not Available";
 	}
-	return "Preview: " + previewUrl;
 }
 
 
@@ -194,7 +193,7 @@ function getMovieInfo(movie) {
 
 // Returns the Rotten Tomatoes rating of a movie, or "N/A" if none
 function getRottenTomatoesRating(ratings) {
-	for (i in ratings) {
+	for (var i in ratings) {
 		if (ratings[i].Source === "Rotten Tomatoes") {
 			return ratings[i].Value;
 		}
@@ -225,7 +224,7 @@ function doWhatItSays() {
  			output = command + " " + argument;
  			console.log(output);
  			updateLogs("do-what-it-says", " ");
- 			// Prevent infinite loop
+ 			// If command is anything other than "do-what-it-says," then send to the command handler
  			if (command !== "do-what-it-says") {
  				commandHandler(command, argument)
  			}
