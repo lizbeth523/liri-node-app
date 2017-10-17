@@ -34,7 +34,7 @@ spotify-this-song
 =================
 
 | Searches for and displays information on a song.
-| To use, enter "node liri.js spotify-this song <song title>" on the command line. The song title is optional. If no song is provided by the user, then the program will search for "The Sign" by Ace of Base.
+| To use, enter "node liri.js spotify-this-song <song title>" on the command line. The song title is optional. If no song is provided by the user, then the program will search for "The Sign" by Ace of Base.
 
 movie-this
 ==========
